@@ -1,0 +1,27 @@
+import java.io*
+class Solution{
+public static void main(String[]args)
+{
+Scanner scn = new Scanner(System.in);
+    string s = scn.next();
+    long n = scn.nextLong();
+    
+    long numA = 0;
+    
+	for(int i = 0; i < s.size(); i++) {
+    	if(s[i] == 'a') {
+    		numA++;
+    	}
+    }
+    
+    long ans = (n/s.size())*numA;
+    
+    for(int i = 0; i < n%s.size(); i++) {
+    	if(s[i] == 'a') {
+    		ans++;
+    	}
+    }
+    
+	System.out.println(ans);
+}
+}
