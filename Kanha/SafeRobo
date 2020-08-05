@@ -1,0 +1,40 @@
+import java.util.io*
+public static void main(String[]args)
+{
+Scanner scn = new Scanner(System.in);
+	int t = scn.nextInt();	
+	while(t--)
+	{
+		string s = scn.next();
+		int sa = scn.nextInt();
+    int sb = scn.nextInt();
+		
+		int a=-1;
+    int b=-1;
+		for(int i=1;i<=s.length();i++)
+		{
+			if(s.charAt(i) == 'A')
+			a = i;
+			
+			if(s.charAt(i) == 'B')
+			b = i;
+		}
+		
+		int flag=0;
+		
+		while(a<s.length() && b>=0)
+		{
+			a = a + sa;
+			b = b - sb;
+			
+			if(a == b)
+			{
+				System.out.println("Unsafe");
+				flag++;
+		    }
+		}
+		if(flag==0){
+    System.out.println("SAFE"):
+    }
+	}
+}
