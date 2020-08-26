@@ -1,0 +1,23 @@
+import java.util.io*;
+
+public class main{
+public static int arrSum(int arr[], int n)
+{	
+	if(n == 0)
+	{
+		return arr[n];
+	}
+	return arr[n] + arrSum(arr, n-1);
+}}
+public static void main(String[] args)
+{
+	int arr[] = {1, 2, 3, 4, 5};
+	
+	int n = 5;
+	
+	int result = arrSum(arr, n);
+	
+	System.out.println(result);
+	
+}
+]
